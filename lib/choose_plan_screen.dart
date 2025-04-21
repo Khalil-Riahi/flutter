@@ -1457,18 +1457,19 @@ class _ChoosePlanScreenState extends State<ChoosePlanScreen> {
                           ),
                         ),
                         onPressed: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => SelectDatesScreen(
-        roomType: subscriptions[selectedIndex].Name,
-        duration: subscriptions[selectedIndex].subscriptionType, // or duration if you have separately
-        price: "${subscriptions[selectedIndex].price} TND",
-      ),
-    ),
-  );
-},
-
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SelectDatesScreen(
+                                roomType: subscriptions[selectedIndex].Name,
+                                duration: subscriptions[selectedIndex]
+                                    .subscriptionType, // or duration if you have separately
+                                price: subscriptions[selectedIndex].price,
+                                id: "${subscriptions[selectedIndex].id}",
+                              ),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Continue to Purchase",
                           style: TextStyle(

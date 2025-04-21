@@ -258,7 +258,7 @@ import 'dart:convert';
 import '../models/subscription.dart';
 
 class SubscriptionService {
-  static const String _baseUrl = 'http://localhost:8000/ELACO/subcription/gg'; 
+  static const String _baseUrl = 'http://192.168.1.34:8000/ELACO/subcription/gg'; 
   // replace 192.168.1.5 with your local IP
 
   static Future<List<Subscription>> fetchOfficeSubscriptions() async {
